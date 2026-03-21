@@ -231,7 +231,9 @@ jobs:
         ADD_PTRACE: ${{ inputs.add_ptrace_fix }}
         ADD_PERF: ${{ inputs.add_perf_patches }}
       run: |
-        bash "$GITHUB_WORKSPACE/android12-5.10/build-helpers/apply-kernel-patches.sh" . "$KERNEL_VER" "$KERNEL_PATCHES"
+        wget https://raw.githubusercontent.com/troy896/GKI_KernelSU_SUSFS/refs/heads/GKI/apply-kernel-patches.sh
+        bash apply-kernel-patches.sh . "$KERNEL_VER" "$KERNEL_PATCHES"
+        rm apply-kernel-patches.sh
 
     - name: Setup Baseband Guard
       if: inputs.add_bbg
