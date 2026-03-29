@@ -5,11 +5,11 @@
       "codename": "komodo",
       "android_version": "android14",
       "kernel_version": "6.1",
-      "sub_level": "145",
-      "os_patch_level": "2025-09",
+      "sub_level": "157",
+      "os_patch_level": "2026-03",
       "stock_kernel": {
-        "release": "-android14-11-gfa1d6308d1fe-ab14691759tu",
-        "version_string": "#1 SMP PREEMPT Fri Jan  9 16:33:46 UTC 2026",
+        "release": "-android14-11-gbd23337e42e7-ab14791245",
+        "version_string": "#1 SMP PREEMPT Wed Jan 28 05:34:14 UTC 2026",
         "build_user": "build-user",
         "build_host": "build-host",
         "compiler_info": "Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2"
