@@ -210,6 +210,8 @@ jobs:
       run: |
         PATCH="$GITHUB_WORKSPACE/$VERSION_DIR/KernelSU-Next/patches/70_ksu_safety-kernelsu-next-${KERNEL_VER}.patch"
         [ -s "$PATCH" ] && patch -p1 --no-backup-if-mismatch < "$PATCH" || echo "No 70_ patch needed"
+        wget https://raw.githubusercontent.com/WildKernels/kernel_patches/refs/heads/main/next/susfs_fix_patches/v2.0.0/ksu_toolkit.patch
+        patch -p1 -F3 --no-backup-if-mismatch < ksu_toolkit.patch
 
     - name: Apply ZeroMount Patch
       if: inputs.add_zeromount && inputs.add_susfs
